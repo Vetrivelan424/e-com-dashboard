@@ -1,0 +1,448 @@
+/* ********************************************************************* */
+/*----------------------------- FONTS USED ---------------------------------- */
+/* ********************************************************************* */
+
+
+@font-face {
+  font-family: helvetica;
+  src: url('./fonts/Helvetica-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: helvetica;
+  src: url('./fonts/helvetica-light-587ebe5a59211.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: helvetica;
+  src: url('./fonts/Helvetica.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ********************************************************************* */
+/* -----------------------COMMON UTILITIES------------------------- */
+/* ********************************************************************* */
+
+:root {
+  --blue: #7394fe;
+  --grey: #818283;
+  --light-black: #202028;
+  --black:#141416;
+  --blue-bg: #f2f5ff;
+  --blue-dark: #3774df;
+  --blue-header: #e0ebff;
+  --purple-light: #e5e5fe;
+  --dark-color: #000000;
+  --dark-light: #3e3e3e;
+  --grey-cor-light: #efefef;
+  --admin-btn-grey:#747373;
+  --grey-dark: #5e5e5e;
+  --bg-light: white;
+  --grey-light: #d1d1d1;
+  --grey-lighter: #f8f8f8;
+ 
+  --bg-body: #f1f2f7;
+
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+
+body {
+  font-family: 'helvetica' !important;
+  font-weight: var(--heavy);
+  /* overflow-y: hidden;
+  overflow-x: hidden; */
+}
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+ 
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+ 
+/* Alternatively, you can target specific elements */
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+ 
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: 'helvetica';
+}
+
+ol,
+ul {
+  padding: 0 !important;
+  margin: 0 !important;
+  list-style-type: none;
+}
+
+
+/* Dashbord Layout */
+.aside-container{
+  width: 75px;
+  height: 100%;
+  margin-top: 75px;
+  position: fixed;
+}
+.top-container{
+  height: 75px;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+}
+.back-light-black{
+  background-color: var(--light-black);
+}
+.back-black{
+  background-color: var(--black);
+}
+.main-container{
+  background-color: var(--black);
+  color: white;
+  padding: 75px 0 0 75px;
+  width: 100%;
+  height: 100%;
+}
+.logo{
+  color: var(--blue);
+  font-size: 30px;
+}
+.text-9{
+  font-size: 9px;
+}
+.menu-icons-1{
+  margin: 20px 0 0 0 !important;
+  padding: 0 16px !important;
+}
+.menu-icons{
+  color: var(--grey-light);
+  font-size: 25px;
+  padding:0px 20px;
+  margin: 35px 0;
+
+}
+.menu-blue-active{
+  color: var(--blue) !important;
+  border-width: 0 0 0 4px;
+  border-color: var(--blue);
+  border-style: solid;
+}
+input[type="search"]{
+  height: 35px;
+  margin: 5px 0 0 40px;
+  width: 260px;
+  padding:0px 20px 1px 40px; 
+  border-radius: 7px;
+  border: solid 1px rgba(152, 139, 123, 0.28);
+  background-color: #2A2B30;
+  outline:none;
+  color: #d4d4d4;
+  font-size:14px;
+ }
+ input[type="search"]::placeholder{
+  color: #d4d4d4;
+  letter-spacing: 0.8px;
+ }
+ .icon-search{
+  position:absolute;
+  left:18%;
+  top:23%;
+
+  font-size: 17px;
+  color:white;
+ }
+ .profile-round{
+  background-color: #44454a;
+  color:var(--grey-light) ;
+  width: 40px;
+  margin: 0 10px;
+  height: 40px;
+  position: relative;
+  border-radius: 50%;
+ }
+ .align-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .point-blue{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top:8px;
+  right: 9px;
+  background-color: var(--blue);
+ }
+ .dash-text{
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+ }
+ .totals-contianer{
+  width: 100%;
+  height: 90%;
+  border-radius: 7px;
+  margin: 10px 5px;
+  padding: 15px 10px 15px 15px;
+  background-color: var(--light-black);
+ }
+ .total-icon-container{
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 34px;
+ }
+.total-icon-1{
+  color:#4062fc ;
+  background-color: #283368;
+}
+.total-icon-2{
+  color:#00c88d;
+  background-color: #155145;
+}
+.total-icon-3{
+  color:#f15d5d ;
+  background-color: #5f3237;
+}
+.total-icon-4{
+  color:#e541a2 ;
+  background-color: #5b2a4a;
+}
+.text-13{
+  font-size: 13px;
+  letter-spacing: 0.8px;
+
+}
+.text-28{
+  font-size: 28px;
+  letter-spacing: 0.8px;
+  font-weight: 900;
+}
+.color-green{
+  color: #07956d;
+}
+.color-red{
+  color: #7f393b;
+}
+.margin-top-10{
+  margin-top: 9px;
+}
+.icon-up{
+  transform: rotate(180deg) !important;
+  font-size: 13px;
+}
+.text-15{
+  font-size: 15px;
+  letter-spacing: 0.8px;
+  font-weight: 800;
+}
+.font-weight-800{
+  font-weight: 800;
+}
+.text-35{
+font-size: 40px;
+font-weight: 900;
+}
+.weekly-container{
+  height: 35px;
+  width: 120px;
+  border-radius: 15px;
+  background-color: #4c4d52;
+}
+
+.text-16{
+  font-size: 16px;
+  letter-spacing: 0.8px;
+  font-weight: 800;
+}
+.goal-text{
+
+}
+.lign-height-2{
+  line-height: 10px;
+}
+.goalcontainer-text{
+  position: absolute;
+  line-height: 16px;
+  text-align: center;
+}
+
+.MuiCircularProgress-track{
+  stroke: #293267 !important;
+  --_progress-length: 144 !important;
+  stroke-width: 9px !important;
+}
+.bar-chart-conainer{
+  width: 100%;
+}
+.point-round{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-size: 30px;
+}
+.red-point{
+  background-color: #5e3237;
+  color: #93442e;
+}
+.blue-point{
+  background-color: #293368;
+  color: #5971ca;
+}
+.green-point{
+  background-color: #214a60;
+  color:#2091c2;
+}
+.goal-text{
+  padding: 15px 10px 10px 10px !important;
+  font-size: 16;
+  letter-spacing: 0;
+
+}
+.icon-for-cont{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #47484d;
+  color: #98979b;
+  font-size: 14px;
+  color: #fff;
+  margin-top: 20px;
+}
+.table-avatar-container {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.table-avatar {
+  width: 100%;
+  height: 100%;
+}
+
+.rdt_Table{
+  background-color: transparent !important;
+}
+.rdt_TableHeadRow {
+  border-bottom: solid 1px #e4e4e4 !important;
+  background-color:transparent !important;
+  /* border-radius: 4px !important; */
+  color:#fff;
+  font-size: 14px !important;
+  font-weight: 700;
+  height: 52px !important;
+}
+
+.rdt_TableRow {
+  border-bottom: solid 1px #e4e4e4;
+  /* border: ; */
+  background-color: transparent !important
+  /* height: 50px !important; */
+ 
+}
+
+.rdt_TableRow {
+  border-bottom: solid 1px #e4e4e4;
+  font-size: 14px !important;
+  /* color: var(--dark-light) !important; */
+}
+
+
+
+.rdt_TableRow:nth-last-child() {
+  border-radius: none !important;
+  width: 100% !important;
+}
+
+
+.rdt_Table {
+  width: 100%;
+}
+
+.rdt_TableCell {
+  border-bottom: solid 1px #e4e4e4;
+  white-space: unset !important;
+  padding-block: 15px;
+}
+
+
+.rdt_TableCell div {
+  color:#fff;
+  white-space: unset !important;
+  word-wrap: wrap;
+}
+.active{
+  width: 100%;
+  background-color: #175246;
+  color: #079f73 !important;
+  padding: 3px 5px;
+  font-size: 13px;
+  border-radius: 15px;
+}
+.text-14{
+  font-size: 14px;
+  letter-spacing: 0.8px;
+  line-height: 5px;
+  color: #7a7b80;
+}
+.feedback{
+  border-bottom: 1px solid #3b3b3d;
+padding-bottom: 15px;
+}
+
+.feed-container{
+  height: 448px;
+  width: 100.3%;
+  margin: 0 0px 74px 4px;
+  /* border-radius: 0 0 10px 10px; */
+  border-color: #e4e4e4;
+  padding-right: 10px;
+  scrollbar-width: auto !important;
+  overflow-y: scroll !important;
+  overflow-x: hidden;
+ position: sticky;
+ }
+
+ 
+/* For WebKit browsers like Chrome and Safari */
+.feed-container::-webkit-scrollbar {
+  width: 5px !important; /* Thin scrollbar */
+  display: block !important;
+  scrollbar-width:thin !important
+}
+
+.feed-container::-webkit-scrollbar-thumb {
+  background-color: #a8a8a8; /* Color of the scrollbar thumb */
+  border-radius: 8px !important;
+}
+.sedc-table-body{
+  border-radius: 0 0 10px 10px !important;
+}
